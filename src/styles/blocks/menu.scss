@@ -12,15 +12,10 @@
 
   transition: transform $duration;
 
-  &:target {
-    transform: translateX(0);
-  }
-
   @include onTablet {
     padding: 36px 28px 0 28px;
     position: relative;
     background: $white;
-    height: 100%;
     transform: none;
   }
 
@@ -145,15 +140,17 @@
   }
 
   &__account {
-    position: absolute;
+    position: fixed;
+    display: flex;
+    bottom: 150px;
 
-    bottom: 120px;
+    @media (max-height: 620px) {
+      position: static;
+    }
 
     @include onTablet {
       bottom: 76px;
     }
-
-    display: flex;
 
     &-photo {
       margin-right: 12px;
