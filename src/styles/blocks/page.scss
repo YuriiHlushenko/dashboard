@@ -1,0 +1,342 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../../../public/fonts/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../../../public/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url("../../../public/fonts/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+
+.page {
+  font-family: "Poppins", sans-serif;
+
+  &__body {
+    margin: 0;
+    background: #FAFBFF;
+
+    &--with-menu {
+      overflow: hidden;
+    }
+  }
+
+  &__container {
+
+    max-width: 1440px;
+
+    @include onTablet {
+      padding: 0 39px;
+      display: grid;
+      grid-template-columns: 1fr 3.7fr;
+      padding: 0 20px;
+      margin: 0 auto;
+    }
+
+    @include onDesktop {
+      padding: 0 55px;
+    }
+  }
+}
+
+.main {
+  padding-top: 20px;
+  background: #FAFBFF;
+  position: relative;
+
+  @include onTablet {
+    padding: 41px 100px 0 67px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+
+    @include onTablet {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  &__menu {
+    border: none;
+    background: none;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__hello {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: $fontColor;
+
+    @include onTablet {
+      margin: 0 0 56px;
+    }
+  }
+
+  &__container {
+    position: relative;
+    background: $white;
+    background: #FFFFFF;
+    box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+    border-radius: 30px;
+
+    padding: 20px;
+
+    @include onTablet {
+      padding: 30px 44px 40px 38px;
+    }
+  }
+
+  &__header {
+    &-title {
+      margin: 0 0 7px;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 33px;
+      letter-spacing: -0.01em;
+      color: $fontColor;
+    }
+
+    &-subTitle {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.01em;
+      color: $fontActive;
+      margin: 0 0 40px;
+    }
+
+    &-search {
+      display: flex;
+      height: 50px;
+      padding: 7px;
+      background: $backgound;
+      border-radius: 10px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+
+      @include onTablet {
+        position: absolute;
+        width: 216px;
+        height: 38px;
+        top: 44px;
+        right: 53px;
+        margin-bottom: 0;
+      }
+
+      &--svg {
+        margin-right: 8px;
+      }
+
+      &--input {
+        width: 85%;
+        background: $backgound;
+        border: none;
+
+        &::placeholder {
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: -0.01em;
+          color: #B5B7C0;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    @include onTablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-info {
+      margin-bottom: 20px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: -0.01em;
+      color: #B5B7C0;
+
+      @include onTablet {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.table {
+  display: grid;
+  position: relative;
+  margin-bottom: 30px;
+  border-collapse: collapse;
+  min-width: 100%;
+  overflow-x: scroll;
+  grid-template-columns:
+    minmax(max-content, 1fr) minmax(max-content, 1fr) minmax(max-content, 1fr) minmax(max-content, 1fr) minmax(max-content, 1fr) minmax(min-content, 1fr);
+  
+  @include onTablet {
+    overflow-x: initial;
+  }
+}
+
+thead,
+tbody,
+tr {
+  display: contents;
+}
+
+thead {
+  &::before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 49px;
+    transform: translateY(-100%);
+    width: 110%;
+    margin-left: -41px;
+    margin-right: -67px;
+    height: 1px;
+    background: $tableColor;
+    content: "";
+    display: block;
+  }
+}
+
+th,
+td {
+  padding: 14px 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  @include onTablet {
+    padding: 14px;
+  }
+}
+
+th {
+  position: sticky;
+  top: 0;
+  text-align: left;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: #B5B7C0;
+
+  &:last-child {
+    text-align: center;
+  }
+}
+
+th:last-child {
+  border: 0;
+}
+
+td {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: #292D32;
+  border-bottom: 1px solid $tableColor;
+
+  @include onTablet {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.active,
+.inactive {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 29px;
+  width: 80px;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.active {
+  background: rgba(22, 192, 152, 0.38);
+  border: 1px solid #00B087;
+  color: #00B087;
+}
+
+.inactive {
+  background: #FFC5C5;
+  border: 1px solid #DF0404;
+  color: #DF0404;
+}
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+
+.page-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 25px;
+  box-sizing: border-box;
+  background: #F5F5F5;
+  border: 1px solid $tableColor;
+  border-radius: 4px;
+
+  &:nth-child(6) {
+    background: none;
+    border: none;
+  }
+
+  &--active {
+    color: $white;
+    background: $activeBackgound;
+    border: 1px solid $activeBackgound;
+
+    .page-link {
+      color: $white;
+    }
+  }
+}
+
+.page-link {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  color: #404B52;
+}
