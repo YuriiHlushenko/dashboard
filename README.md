@@ -1,9 +1,17 @@
-# React TypeScript Starter Pack
+Test task Dashboard
 
-To use this template click `Use this template`
+Platform: descktop, mobile
+In this project I used HTML, SCSS, CSS Flex, Grid, React
 
-### Available Scripts
+node v20.13.1 https://nodejs.org/en/download
 
-`Deploy` - available to deploy your application to gh-pages
+1. git clone https://github.com/YuriiHlushenko/dashboard.git
+2. npm install
+3. npm start
 
-`SCSS Preprocessor` - available to write your styles with modern style language
+
+[DEMO LINK](https://yuriihlushenko.github.io/dashboard/)
+
+[Figma design](https://www.dropbox.com/scl/fi/5nm4bi3ajbwe49l6m9snr/CRM-Dashboard-Customers.fig?rlkey=xjfi40538zvpq4dvicit99jrl&st=bbojkasi&dl=0)
+
+
