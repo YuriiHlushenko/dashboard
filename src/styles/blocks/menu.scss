@@ -1,6 +1,6 @@
 .menu {
   position: fixed;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
   top: 0;
   left: 0;
@@ -13,12 +13,11 @@
   transition: transform $duration;
 
   @include onTablet {
-    padding: 36px 28px 0 28px;
     position: relative;
+    padding: 36px 28px 0 28px;
     background: $white;
     transform: none;
   }
-
 
   &__cross {
     border: none;

@@ -36,6 +36,7 @@ input:focus {
 
   &__container {
     max-width: 1440px;
+    height: 100%;
 
     @include onTablet {
       padding: 0 39px;
